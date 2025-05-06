@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# React Quiz App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React application that tests your knowledge of React concepts through an interactive quiz experience.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **15 React-focused Questions**: Test your knowledge of React fundamentals and advanced concepts
+- **Timer**: 30 seconds per question to challenge your speed and knowledge
+- **Progress Tracking**: Visual progress bar to track your journey through the quiz
+- **Point System**: Different questions have different point values based on difficulty
+- **Highscore Tracking**: Save and display your best performance
+- **Fully Responsive**: Works perfectly on mobile, tablet and desktop devices
+- **Modern UI**: Clean and engaging user interface with smooth animations
 
-### `npm start`
+## 🛠️ Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 19
+- React Hooks (useState, useEffect, useReducer)
+- CSS3 with custom properties
+- JSON Server (for development)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📋 Prerequisites
 
-### `npm test`
+- Node.js (v16.0 or higher recommended)
+- npm or yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚙️ Installation & Setup
 
-### `npm run build`
+1. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Start the JSON server (for local development):
+```bash
+npm run server
+# or
+yarn server
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. In a separate terminal, start the React application:
+```bash
+npm start
+# or
+yarn start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Open your browser and visit:
+```
+http://localhost:3000
+```
 
-### `npm run eject`
+## 🎮 How to Play
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Click "Let's Start" on the welcome screen
+2. Read each question carefully and select the answer you believe is correct
+3. The timer counts down from 30 seconds for each question
+4. After selecting an answer, click "Next" to proceed to the next question
+5. Your score will be calculated based on correct answers
+6. After completing all questions, you'll see your final score and highscore
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📱 Responsive Design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The quiz is fully responsive and works well on:
+- Mobile phones (portrait and landscape)
+- Tablets
+- Desktop computers
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎨 Customization
 
-## Learn More
+### Colors
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can customize the color scheme by modifying the CSS variables in `src/index.css`:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```css
+:root {
+  --color-darkest: #123a40;
+  --color-dark: #005057;
+  --color-medium: gold;
+  --color-light: #fff;
+  --color-theme: seagreen;
+  --color-accent: orangered;
+}
+```
 
-### Code Splitting
+### Questions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To modify or add questions, update the `data/questions.json` file. Each question follows this format:
 
-### Analyzing the Bundle Size
+```json
+{
+  "question": "Your question text here?",
+  "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
+  "correctOption": 0, // Index of the correct option
+  "points": 10 // Points for this question
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🙏 Acknowledgements
 
-### Making a Progressive Web App
+- [React Documentation](https://react.dev/)
+- [Create React App](https://create-react-app.dev/)
+- [JSON Server](https://github.com/typicode/json-server)
+- [Google Fonts (Codystar)](https://fonts.google.com/specimen/Codystar)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made with ❤️ by [Abdallah Zeiada]
