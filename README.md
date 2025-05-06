@@ -107,4 +107,4 @@ To modify or add questions, update the `data/questions.json` file. Each question
 
 ---
 
-Made with ❤️ by [Abdallah Zeiada]
+Made with ❤️ by Abdallah Zeiada
